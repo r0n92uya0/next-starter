@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: (客户端 + 服务端)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm dev", 
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithEdge"
+      }
+    },
+    {
+      "name": "Next.js: 仅调试客户端 (Chrome)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Next.js: 仅调试服务端 (Node.js)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm dev"
+    }
+  ]
+}
